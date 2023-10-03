@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>57.0</apiVersion>
+    <isExposed>true</isExposed>
+    <masterLabel>Einstein Recommendations</masterLabel>
+    <targets>
+        <target>lightningCommunity__Page</target>
+        <target>lightningCommunity__Default</target>
+        <target>lightning__RecordPage</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightningCommunity__Default">
+            <property
+                label="Use Case"
+                name="useCase"
+                type="String"
+                datasource="Recently Viewed,Similar Products,Complementary Products,Customers Also Bought,Upsell,Most Viewed By Category,Top Selling By Category"
+                default="Similar Products" />
+            <property
+                label="Header Text"
+                name="headerText"
+                type="String"
+                default="Similar Products" />
+            <property
+                label="Maximum Products Visible"
+                name="maximumProductsVisible"
+                type="Integer"
+                default="4" />
+            <property
+                label="Hide For Results Fewer Than"
+                name="hideForResultsFewerThan"
+                type="Integer"
+                default="2" />
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>
